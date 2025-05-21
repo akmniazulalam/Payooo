@@ -6,8 +6,10 @@ loginBtn.addEventListener("click", () => {
     let pinValue = pinNumber.value
     if (numberValue == "01711989790" && pinValue == "2000") {
         window.location.href = "./home.html"
+        mobileNumber.value = ""
+        pinNumber.value = ""
     }
-    else if (numberValue == "" && pinValue == "") {
+    else if (numberValue == "" || pinValue == "") {
         alert("Please fill the input field.")
     }
     else {
