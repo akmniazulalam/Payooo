@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+@theme {
+  --font-outfit: "Outfit", "sans-serif";
+  --font-inter: "Inter", "sans-serif";
+  --color-blue: #0874F2;
+}
