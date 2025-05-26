@@ -12,6 +12,19 @@ document.querySelectorAll('input[type="number"]').forEach(function(input) {
 });
 
 
+
+let pinNumbers = document.querySelectorAll('input[type="password"]');
+
+pinNumbers.forEach((input) => {
+  input.addEventListener("input", () => {
+    if (input.value.length > 4) {
+      input.value = input.value.slice(0, 4);
+    }
+  });
+});
+
+
+
 loginBtn.addEventListener("click", () => {
   let numberValue = mobileNumber.value;
   let pinValue = pinNumber.value;
