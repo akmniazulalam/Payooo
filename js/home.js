@@ -1,9 +1,9 @@
 let log_out = document.getElementById("log_out");
 
 // Prevent access if not logged in
-if (localStorage.getItem("isLoggedIn") !== "true") {
-    window.location.href = "./index.html";
-}
+// if (localStorage.getItem("isLoggedIn") !== "true") {
+//     window.location.href = "./index.html";
+// }
 
 // Logout logic
 log_out.addEventListener("click", () => {

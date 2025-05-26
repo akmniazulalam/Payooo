@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script>
+      if (localStorage.getItem("isLoggedIn") !== "true") {
+        window.location.replace("index.html");
+      }
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
@@ -60,7 +65,8 @@
                 </p>
               </div>
               <button
-                class="btn btn-neutral btn-outline hover:text-white group text-[14px] font-outfit text-[rgba(8,8,8,0.50)] border-[rgba(8,8,8,0.1)] rounded-[8px] ml-14" id="log_out">
+                class="btn btn-neutral btn-outline hover:text-white group text-[14px] font-outfit text-[rgba(8,8,8,0.50)] border-[rgba(8,8,8,0.1)] rounded-[8px] ml-14"
+                id="log_out">
                 <svg
                   width="20"
                   height="20"
@@ -111,42 +117,48 @@
             </p>
             <div class="flex px-6 pt-6 gap-3 flex-wrap">
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col justify-center space-y-1" id="add_money">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col justify-center space-y-1"
+                id="add_money">
                 <img
                   src="src/asset/wallet 1.png"
                   alt="wallet 1.png"
                   class="pt-1" />Add Money
               </button>
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center" id="cash_out">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center"
+                id="cash_out">
                 <img
                   src="src/asset/send 1.png"
                   alt="send 1.png"
                   class="pt-1" />Cashout
               </button>
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center" id="transfer_money">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center"
+                id="transfer_money">
                 <img
                   src="src/asset/money 1.png"
                   alt="money 1.png"
                   class="pt-1" />Transfer Money
               </button>
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col justify-center space-y-1" id="get_bonus">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col justify-center space-y-1"
+                id="get_bonus">
                 <img
                   src="src/asset/financial 1.png"
                   alt="financial 1.png"
                   class="pt-1" />Get Bonus
               </button>
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center" id="pay_bill">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center"
+                id="pay_bill">
                 <img
                   src="src/asset/purse 1.png"
                   alt="purse 1.png"
                   class="pt-1" />Pay Bill
               </button>
               <button
-                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center" id="transactions_btn">
+                class="btn btn-outline btn-primary w-[106px] h-[90px] py-3 text-black text-[14px] font-outfit font-semibold hover:text-[#0874F2] hover:bg-[rgba(8,117,242,0.06)] hover:border-[#0874F2] transition-all duration-500 border-[#0808084f] shadow-none rounded-[12px] flex flex-col items-center justify-center space-y-1 text-center"
+                id="transactions_btn">
                 <img
                   src="src/asset/transaction 1.png"
                   alt="transaction 1.png"
@@ -180,8 +192,7 @@
                 class="fa-solid fa-ellipsis-vertical text-[20px] text-[rgba(8,8,8,0.7)] ml-auto"></i>
             </div>
             <div
-              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3
-              cursor-pointer">
+              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer">
               <img src="src/asset/wallet 1 (1).png" alt="wallet 1 (1).png" />
               <div class="pl-3 text-left">
                 <h4
@@ -196,7 +207,7 @@
                 class="fa-solid fa-ellipsis-vertical text-[20px] text-[rgba(8,8,8,0.7)] ml-auto"></i>
             </div>
             <div
-              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer"> 
+              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer">
               <img src="src/asset/wallet 1 (1).png" alt="wallet 1 (1).png" />
               <div class="pl-3 text-left">
                 <h4
@@ -231,14 +242,16 @@
               class="font-outfit font-semibold text-[17px] text-[rgba(8,8,8,0.9)] text-left">
               Add Money
             </h3>
-            <div class="mt-[8px] px-5 pt-[5px] pb-[10px] bg-white rounded-3xl font-outfit">
+            <div
+              class="mt-[8px] px-5 pt-[5px] pb-[10px] bg-white rounded-3xl font-outfit">
               <legend
                 class="fieldset-legend text-left text-[rgba(8,8,8,0.7)] font-medium text-[15px] pt-[6px] pb-[9px]">
                 Select A Bank
               </legend>
               <div class="relative">
                 <select
-                  class="outline-0 cursor-pointer appearance-none w-[300px] text-[#08080869] bg-[#F4F5F7] rounded-full px-5 text-[15px] font-light h-[40px]" id="selectBank">
+                  class="outline-0 cursor-pointer appearance-none w-[300px] text-[#08080869] bg-[#F4F5F7] rounded-full px-5 text-[15px] font-light h-[40px]"
+                  id="selectBank">
                   <option disabled selected>Select Bank</option>
                   <option>Islami Bank Limited</option>
                   <option>Sonali Bank Limited</option>
@@ -288,7 +301,8 @@
               class="font-outfit font-semibold text-[17px] text-[rgba(8,8,8,0.9)] text-left">
               Cash Out
             </h3>
-            <div class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
+            <div
+              class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
               <fieldset class="fieldset w-[300px]">
                 <legend
                   class="fieldset-legend text-left text-[rgba(8,8,8,0.7)] font-medium text-[15px] py-[6px]">
@@ -330,7 +344,8 @@
               class="font-outfit font-semibold text-[17px] text-[rgba(8,8,8,0.9)] text-left">
               Transfer Money
             </h3>
-            <div class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
+            <div
+              class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
               <fieldset class="fieldset w-[300px]">
                 <legend
                   class="fieldset-legend text-left text-[rgba(8,8,8,0.7)] font-medium text-[15px] py-[6px]">
@@ -372,7 +387,8 @@
               class="font-outfit font-semibold text-[17px] text-[rgba(8,8,8,0.9)] text-left">
               Get Bonus
             </h3>
-            <div class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
+            <div
+              class="mt-[8px] px-5 pt-[13px] pb-[18px] bg-white rounded-3xl font-outfit">
               <fieldset class="fieldset w-[300px]">
                 <legend
                   class="fieldset-legend text-left text-[rgba(8,8,8,0.7)] font-medium text-[15px] py-[6px]">
@@ -383,7 +399,7 @@
                   id="couponCode"
                   class="input placeholder:text-[#08080869] placeholder:text-[15px] placeholder:font-light text-[#080808] bg-[#F4F5F7] rounded-full [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none focus:bg-[#F4F5F7] px-5"
                   placeholder="Enter your coupon" />
-                
+
                 <button
                   id="getBonusBtn"
                   class="btn btn-primary mt-[8px] rounded-full text-[18px] font-semibold bg-[#0874F2]">
@@ -397,14 +413,16 @@
               class="font-outfit font-semibold text-[17px] text-[rgba(8,8,8,0.9)] text-left">
               Pay Bill
             </h3>
-            <div class="mt-[8px] px-5 pt-[5px] pb-[10px] bg-white rounded-3xl font-outfit">
+            <div
+              class="mt-[8px] px-5 pt-[5px] pb-[10px] bg-white rounded-3xl font-outfit">
               <legend
                 class="fieldset-legend text-left text-[rgba(8,8,8,0.7)] font-medium text-[15px] pt-[6px] pb-[9px]">
                 Select To Pay
               </legend>
               <div class="relative">
                 <select
-                  class="outline-0 cursor-pointer appearance-none w-[300px] text-[#08080869] bg-[#F4F5F7] rounded-full px-5 text-[15px] font-light h-[40px]" id="selectBankPay">
+                  class="outline-0 cursor-pointer appearance-none w-[300px] text-[#08080869] bg-[#F4F5F7] rounded-full px-5 text-[15px] font-light h-[40px]"
+                  id="selectBankPay">
                   <option disabled selected>Select Bank</option>
                   <option>Islami Bank Limited</option>
                   <option>Sonali Bank Limited</option>
@@ -475,8 +493,7 @@
                 class="fa-solid fa-ellipsis-vertical text-[20px] text-[rgba(8,8,8,0.7)] ml-auto"></i>
             </div>
             <div
-              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3
-              cursor-pointer">
+              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer">
               <img src="src/asset/wallet 1 (1).png" alt="wallet 1 (1).png" />
               <div class="pl-3 text-left">
                 <h4
@@ -491,7 +508,7 @@
                 class="fa-solid fa-ellipsis-vertical text-[20px] text-[rgba(8,8,8,0.7)] ml-auto"></i>
             </div>
             <div
-              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer"> 
+              class="flex items-center py-[13px] px-[16px] rounded-[12px] bg-white border border-[rgba(8,8,8,0.1)] mt-3 cursor-pointer">
               <img src="src/asset/wallet 1 (1).png" alt="wallet 1 (1).png" />
               <div class="pl-3 text-left">
                 <h4
