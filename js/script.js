@@ -1,6 +1,8 @@
 let mobileNumber = document.getElementById("mobileNumber")
 let pinNumber = document.getElementById("pinNumber")
 let loginBtn = document.getElementById("loginBtn")
+
+
 document.querySelectorAll('input[type="number"]').forEach(function(input) {
   input.addEventListener('keydown', function(e) {
     if (['e', 'E', '+', '-', '.'].includes(e.key)) {
@@ -15,6 +17,8 @@ loginBtn.addEventListener("click", () => {
   let pinValue = pinNumber.value;
 
   if (numberValue === "01860978120" && pinValue === "2000") {
+    localStorage.setItem("mobile", numberValue);
+    localStorage.setItem("pin", pinValue);
     localStorage.setItem("isLoggedIn", "true");
     window.location.href = "./home.html";
     mobileNumber.value = "";

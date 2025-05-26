@@ -2,7 +2,16 @@
 <html lang="en">
   <head>
     <script>
-      if (localStorage.getItem("isLoggedIn") !== "true") {
+      let mobile = localStorage.getItem("mobile");
+      let pin = localStorage.getItem("pin");
+      let correctNumber = "01860978120";
+      let pin_number = "2000";
+      if (
+        localStorage.getItem("isLoggedIn") !== "true" ||
+        mobile !== correctNumber ||
+        pin !== pin_number
+      ) {
+        localStorage.clear();
         window.location.replace("index.html");
       }
     </script>
